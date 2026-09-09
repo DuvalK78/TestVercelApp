@@ -498,14 +498,9 @@ body::after {
 // MAP
 // ═══════════════════════════════════
 const map = L.map('map',{center:[20,0],zoom:2,zoomControl:false,attributionControl:false});
-L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{
-  subdomains:'abcd',maxZoom:19
+L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png',{
+  maxZoom:19
 }).addTo(map);
-// Teinte verte sur la carte
-L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{
-  subdomains:'abcd',maxZoom:19,opacity:0
-}).addTo(map);
-
 // Coords hover
 map.on('mousemove',e=>{
   document.getElementById('mapCoords').textContent=
