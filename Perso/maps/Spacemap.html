@@ -501,11 +501,6 @@ const map = L.map('map',{center:[20,0],zoom:2,zoomControl:false,attributionContr
 L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png',{
   maxZoom:19
 }).addTo(map);
-// Coords hover
-map.on('mousemove',e=>{
-  document.getElementById('mapCoords').textContent=
-    `LAT ${e.latlng.lat.toFixed(4)}° / LON ${e.latlng.lng.toFixed(4)}°`;
-});
 
 // ═══════════════════════════════════
 // CLOCK
